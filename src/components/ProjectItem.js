@@ -6,7 +6,10 @@ function ProjectItem({ name, about, technologies }) {
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
+        {/* Map over technologies and create a <span> for each item */}
+        {technologies.map((tech, index) => (
+          <span key={index}>{tech}</span>
+        ))}
       </div>
     </div>
   );
